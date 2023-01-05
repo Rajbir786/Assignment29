@@ -10,8 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import naveenAutomationAssignment.Base.TestBase;
 
-public class AccountLogOut extends TestBase {
-	public AccountLogOut () {
+public class AccountLogOutPage extends TestBase {
+	public AccountLogOutPage () {
 		PageFactory.initElements(driver, this);
 	}
 

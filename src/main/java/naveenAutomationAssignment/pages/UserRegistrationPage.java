@@ -65,7 +65,7 @@ public class UserRegistrationPage extends TestBase {
 			privacyPolicyCheckBox.click();
 		}
 
-		public AccountCreated signUp(String fname, String lname, String emailInput, String phone, String pwd, String cPwd) {
+		public AccountCreatedPage signUp(String fname, String lname, String emailInput, String phone, String pwd, String cPwd) {
 			enterFirstName(fname);
 			enterLastName(lname);
 			enterEmail(emailInput);
@@ -74,7 +74,7 @@ public class UserRegistrationPage extends TestBase {
 			enterConfirmPwd(cPwd);
 			clickPrivacyPolicy();
 			continueBtn.click();
-			return new AccountCreated();
+			return new AccountCreatedPage();
 		}
 
 	}

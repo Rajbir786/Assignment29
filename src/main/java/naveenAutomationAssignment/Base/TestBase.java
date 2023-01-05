@@ -11,18 +11,21 @@ import org.openqa.selenium.interactions.Actions;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import naveenAutoMationAssignmnetBrowser.Browser;
 
 public class TestBase {
-	 public static WebDriver driver;
+	
+	public static WebDriver driver;
+	 public Browser DEFAULT_BROWSER=Browser.GOOGLE_CHROME;
 	
 		Actions action;
 
 
 
 		public void launchBrowser() {
-	String browserTesting="chrome";
+	
 			
-			switch(browserTesting.toLowerCase())
+			switch(DEFAULT_BROWSER.getName())
 			{
 			case "chrome":
 			WebDriverManager.chromedriver().setup();
@@ -30,12 +33,12 @@ public class TestBase {
 				
 				
 				break;
-			case "firebox":
+			case "edge":
 				WebDriverManager.firefoxdriver().setup();
 				driver=new EdgeDriver();
 				
 				break;
-			case "edge":
+			case "firefox":
 				WebDriverManager.edgedriver().setup();
 				driver=new FirefoxDriver();
 				

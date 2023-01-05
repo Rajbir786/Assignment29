@@ -30,6 +30,10 @@ public class MyAccountPage extends TestBase {
 	WebElement subscribeOrnonSubscribeLink;
 	@FindBy(css ="div.list-group a:last-of-type")
 	WebElement logOutLink;
+	@FindBy(css="ul.nav.navbar-nav li.dropdown:nth-of-type(2) a.dropdown-toggle")
+	WebElement LaptopsNoteBooksDropDown;
+	@FindBy(css="li.dropdown.open div.dropdown-menu a.see-all")
+	WebElement showAllLaptopsAndNoteBooksLink;
 
 	public String getMyAccountText() {
 		return myAccountText.getText();
@@ -47,16 +51,31 @@ public class MyAccountPage extends TestBase {
 		return subscribeOrUnSubscribeSuccessBanner.getText();
 		
 	}
+	@FindBy(css="div.list-group a:nth-of-type(6)")
+	WebElement orderHistoryLink;
 public NewsLetterSubscriptionPage subscribeOrNonSubscribeNewsLetter() {
 	subscribeOrnonSubscribeLink.click();
 	return new NewsLetterSubscriptionPage();
 	
 }
-public  AccountLogOut LogOut() {
+public  AccountLogOutPage LogOut() {
 	
 	logOutLink.click();
-	return new AccountLogOut();
+	return new AccountLogOutPage();
 	
 }
-	
+public OrderHistoryPage clickOrderHistoryLink() {
+	orderHistoryLink.click();
+	return new OrderHistoryPage();
+}
+public LaptopsNotebooksPage clickOnAllLaptopsAndNotebook() {
+	LaptopsNoteBooksDropDown.click();
+	showAllLaptopsAndNoteBooksLink.click();
+	return new LaptopsNotebooksPage();
+}
+
+
+
+
+
 }

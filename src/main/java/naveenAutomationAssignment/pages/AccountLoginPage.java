@@ -1,35 +1,33 @@
 package naveenAutomationAssignment.pages;
 
-
-
 	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.support.FindBy;
 	import org.openqa.selenium.support.PageFactory;
-
-import naveenAutomationAssignment.Base.TestBase;
+    import naveenAutomationAssignment.Base.TestBase;
 
 
 
 	public class AccountLoginPage extends TestBase {
 
 		public AccountLoginPage() {
-			PageFactory.initElements(driver, this);
+			PageFactory.initElements(driver, this);//intiliaze the elements and rv of driver and class,it store id inside it when we consume it 
+			
 		}
 
-		@FindBy(css = "form div.form-group:first-of-type input")
+		@FindBy(css ="form div.form-group:first-of-type input")
 		WebElement emailInputField;
 
-		@FindBy(css = "form div.form-group:last-of-type input")
+		@FindBy(css ="form div.form-group:last-of-type input")
 		WebElement passwordInputField;
 
 		@FindBy(css = "input[type='submit']")
 		WebElement loginBtn;
 
-		public void enterEmailInputField(String email) {
+		private void enterEmailInputField(String email) {
 			emailInputField.sendKeys(email);
 		}
 
-		public void enterPasswordInputField(String password) {
+		private void enterPasswordInputField(String password) {
 			passwordInputField.sendKeys(password);
 		}
 

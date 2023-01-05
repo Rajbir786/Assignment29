@@ -10,17 +10,16 @@ public class HomePage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-
-
-	
-
-	@FindBy(xpath="//span[contains(text(),'My Account')]")
+@FindBy(xpath="//span[contains(text(),'My Account')]")
 	WebElement myAccountDropDown;
 
 	@FindBy(css="ul.dropdown-menu.dropdown-menu-right li:first-of-type a")
 	WebElement RegisterOptionFromMyAccountDropDown;	
 	@FindBy(css="ul.dropdown-menu.dropdown-menu-right li:nth-of-type(2) a")
-	WebElement loginOptionFromMyAccountDropDown;	
+	WebElement loginOptionFromMyAccountDropDown;
+	
+	
+	
 	
 	public UserRegistrationPage clickMyAccountDropDown1() {
 		 myAccountDropDown.click();
@@ -30,14 +29,13 @@ public class HomePage extends TestBase {
 		
 	}
 	public AccountLoginPage clickMyAccountDropDown() {
-		
 		 myAccountDropDown.click();
 		 loginOptionFromMyAccountDropDown.click();
 		 return new AccountLoginPage();
 	
 		
 	}
-
+	
 	
 
 

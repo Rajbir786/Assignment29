@@ -22,7 +22,6 @@ public class NewsLetterSubscriptionPage extends TestBase {
 	public MyAccountPage selectSubscriptionOfNewsLetter() {
 		selectUnSubscribeRadioButton.isSelected();
 		continueButtonAfterUnSubscribtion.click();
-		
 		return new MyAccountPage();
 	}
 

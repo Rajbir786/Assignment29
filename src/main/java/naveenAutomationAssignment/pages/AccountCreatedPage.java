@@ -11,9 +11,9 @@ import naveenAutomationAssignment.Base.TestBase;
 
 
 
-public class AccountCreated extends TestBase {
+public class AccountCreatedPage extends TestBase {
 
-	public AccountCreated() {
+	public AccountCreatedPage() {
 		PageFactory.initElements(driver, this);
 	}
 
