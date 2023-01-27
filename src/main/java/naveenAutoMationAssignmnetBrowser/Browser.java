@@ -1,6 +1,7 @@
 package naveenAutoMationAssignmnetBrowser;
 
 public enum Browser {
+
 	GOOGLE_CHROME("google"),
 	EDGE("edge"),
 	FIREFOX("firefox");

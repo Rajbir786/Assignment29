@@ -8,7 +8,7 @@ import naveenAutomationAssignment.Base.TestBase;
 
 public class NewsLetterSubscriptionPage extends TestBase {
 
-	public NewsLetterSubscriptionPage () {
+	public NewsLetterSubscriptionPage() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -16,9 +16,7 @@ public class NewsLetterSubscriptionPage extends TestBase {
 	WebElement selectUnSubscribeRadioButton;
 	@FindBy(css = "input[type='submit']")
 	WebElement continueButtonAfterUnSubscribtion;
-	
-	
-	
+
 	public MyAccountPage selectSubscriptionOfNewsLetter() {
 		selectUnSubscribeRadioButton.isSelected();
 		continueButtonAfterUnSubscribtion.click();

@@ -30,6 +30,8 @@ package naveenAutomationAssignment.pages;
 		private void enterPasswordInputField(String password) {
 			passwordInputField.sendKeys(password);
 		}
+		@FindBy(css = "div.alert")
+		WebElement alertBanner;
 
 		public MyAccountPage login(String email, String password) {
 			enterEmailInputField(email);
@@ -37,6 +39,9 @@ package naveenAutomationAssignment.pages;
 			loginBtn.submit();
 			return new MyAccountPage();
 
+		}
+		public String getTextFromAlertBanner() {
+			return alertBanner.getText();
 		}
 
 

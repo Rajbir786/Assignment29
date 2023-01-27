@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import naveenAutomationAssignment.Base.TestBase;
 import naveenAutomationAssignment.pages.AccountCreatedPage;
 import naveenAutomationAssignment.pages.HomePage;
-import naveenAutomationAssignment.pages.LaptopsNotebooksPage;
+
 import naveenAutomationAssignment.pages.UserRegistrationPage;
 
 

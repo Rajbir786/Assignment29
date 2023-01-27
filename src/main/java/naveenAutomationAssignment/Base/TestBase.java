@@ -1,83 +1,66 @@
 package naveenAutomationAssignment.Base;
-
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-
-
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import naveenAutoMationAssignmnetBrowser.Browser;
+import naveenAutomationAssignment.Listeners.WebdriverEvents;
+
 
 public class TestBase {
-	
 	public static WebDriver driver;
-	 public Browser DEFAULT_BROWSER=Browser.GOOGLE_CHROME;
+	public Browser DEFAULT_BROWSER = Browser.GOOGLE_CHROME;
+	public static WebdriverEvents events=new WebdriverEvents();
 	
-		Actions action;
+	public EventFiringWebDriver eventFiringWebDriver;
+	public void launchBrowser() {
 
-
-
-		public void launchBrowser() {
-	
-			
-			switch(DEFAULT_BROWSER.getName())
-			{
-			case "chrome":
+		switch (DEFAULT_BROWSER) {
+		case GOOGLE_CHROME:
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
-				
-				
-				break;
-			case "edge":
-				WebDriverManager.firefoxdriver().setup();
-				driver=new EdgeDriver();
-				
-				break;
-			case "firefox":
-				WebDriverManager.edgedriver().setup();
-				driver=new FirefoxDriver();
-				
-				break;
-				default:
-					System.out.println("invalid browser");
-					break;
-					
-					// load webpage
-				// navigation to page
-
-		
-		
-			}
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rajbir\\drivers\\chromedriver.exe");
-			// intialise webdriver instance.
 			driver = new ChromeDriver();
+			break;
 
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		case EDGE:
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+			break;
 
-			driver.manage().window().maximize();
-			
-			//Manage the page load timeout
-			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-			
-			//Manage the script load timeout
-			driver.manage().timeouts().setScriptTimeout(60, TimeUnit.SECONDS);
+		case FIREFOX:
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+			break;
 
-			// load webpage
-			driver.get("https://naveenautomationlabs.com/opencart/index.php?route=common/home");// navigation to page
-
+		default:
+			System.out.println("Not a valid browser");
+			break;
 		}
+		 eventFiringWebDriver=new EventFiringWebDriver(driver);
+		eventFiringWebDriver.register(events);
+		driver=eventFiringWebDriver;
 
-		public void quitBrowser() {
-			// closing the browser
-			driver.close();
-		}
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		driver.manage().window().maximize();
+
+		// Manage the page load timeout
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+
+		// Manage the script load timeout
+		driver.manage().timeouts().setScriptTimeout(60, TimeUnit.SECONDS);
+
+		// Launch a page
+		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=common/home");
 
 	}
 
+	public void quitBrowser() {
+		// closing the browser
+		driver.close();
+	}
 
-
+}
+	
