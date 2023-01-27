@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="naveenAutomationAssignment.Tests.OrderHistoryTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyPriceForOrder"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- naveenAutomationAssignment.Tests.OrderHistoryTest -->
+      <class name="naveenAutomationAssignment.Tests.WishListTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyTitleOfPageItemSelectedwithPrice"/>
+        </methods>
+      </class> <!-- naveenAutomationAssignment.Tests.WishListTest -->
+      <class name="naveenAutomationAssignment.Tests.MyAccountTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyUserAbleToSubscribe"/>
+        </methods>
+      </class> <!-- naveenAutomationAssignment.Tests.MyAccountTest -->
+      <class name="naveenAutomationAssignment.Tests.AccountCreatedTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyUserAbleToRegister"/>
+        </methods>
+      </class> <!-- naveenAutomationAssignment.Tests.AccountCreatedTest -->
+      <class name="naveenAutomationAssignment.Tests.AccountLogInTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="verifyAlertBannerForInvalidLoginCredentials"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- naveenAutomationAssignment.Tests.AccountLogInTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

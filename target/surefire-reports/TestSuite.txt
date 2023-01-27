@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 6, Errors: 0, Skipped: 1, Time elapsed: 184.091 s <<< FAILURE! - in TestSuite
+verifyUserAbleToRegister(naveenAutomationAssignment.Tests.AccountCreatedTest)  Time elapsed: 2.065 s  <<< FAILURE!
+java.lang.AssertionError: Account not created expected [Your Account Has Been Created!] but found [Register Account]
+	at naveenAutomationAssignment.Tests.AccountCreatedTest.verifyUserAbleToRegister(AccountCreatedTest.java:34)
+
+verifyUserAbleToSubscribe(naveenAutomationAssignment.Tests.MyAccountTest)  Time elapsed: 0.023 s  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-5A74DQH', ip: '192.168.1.64', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Rajbir\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e4573e6d89bacb8602272e4f22301ead
+*** Element info: {Using=xpath, value=//span[contains(text(),'My Account')]}
+	at naveenAutomationAssignment.Tests.MyAccountTest.verifyUserAbleToSubscribe(MyAccountTest.java:49)
+
+tearDown(naveenAutomationAssignment.Tests.MyAccountTest)  Time elapsed: 32.462 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+disconnected: unable to connect to renderer
+  (failed to check if window was closed: disconnected: unable to connect to renderer)
+  (Session info: chrome=108.0.5359.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-5A74DQH', ip: '192.168.1.64', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Rajbir\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e4573e6d89bacb8602272e4f22301ead
+	at naveenAutomationAssignment.Tests.MyAccountTest.tearDown(MyAccountTest.java:73)
+
+verifyPriceForOrder(naveenAutomationAssignment.Tests.OrderHistoryTest)  Time elapsed: 1.439 s  <<< FAILURE!
+java.lang.AssertionError: expected [priceElement.getText()] but found [Tony Stark]
+	at naveenAutomationAssignment.Tests.OrderHistoryTest.verifyPriceForOrder(OrderHistoryTest.java:28)
+
+verifyTitleOfPageItemSelectedwithPrice(naveenAutomationAssignment.Tests.WishListTest)  Time elapsed: 7.564 s  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-5A74DQH', ip: '192.168.1.64', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Rajbir\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62034}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 74b4ef8cfb664cd4e8e091acc53974f7
+*** Element info: {Using=css selector, value=div.alert.alert-success}
+	at naveenAutomationAssignment.Tests.WishListTest.verifyTitleOfPageItemSelectedwithPrice(WishListTest.java:34)
+
+tearDown(naveenAutomationAssignment.Tests.WishListTest)  Time elapsed: 39.92 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+disconnected: unable to connect to renderer
+  (failed to check if window was closed: disconnected: unable to connect to renderer)
+  (Session info: chrome=108.0.5359.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-5A74DQH', ip: '192.168.1.64', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Rajbir\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62034}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 74b4ef8cfb664cd4e8e091acc53974f7
+	at naveenAutomationAssignment.Tests.WishListTest.tearDown(WishListTest.java:65)
+
